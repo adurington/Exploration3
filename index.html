@@ -12,12 +12,25 @@
     <h1>Game Exploration</h1>
 	    <script type='text/javascript'>
 			var CANVAS_WIDTH = 480;
-			var CANVAS_ HEIGHT = 480;
+			var CANVAS_HEIGHT = 480;
 			
 			var canvasElement = $("<canvas width ='" + CANVAS_WIDTH + "' height='" + CANVAS_HEIGHT + "'></canvas>");
 			var canvas = canvasElement.get(0).getContext("2d");
 			canvasElement.appendTo('body');
-		
+			
+			var FPS = 30;
+			setInterval(function() {
+				update();
+				draw();
+			}, 1000/FPS);
+			
+			function update(){
+			
+			}
+			function draw(){
+			
+			}
+			
 		
 		</script>
 
