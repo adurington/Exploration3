@@ -42,9 +42,11 @@
 				 player.x = player.x.clamp(0, CANVAS_WIDTH - player.width);
 				 player.y = player.y.clamp(0, CANVAS_HEIGHT - player.height);
 			}
-						
+			var count = 0;	
 			function draw() {
 				canvas.clearRect(0,0, CANVAS_WIDTH, CANVAS_HEIGHT);
+				canvas.fillStyle = "#000"
+				canvas.fillText(count, 25, 25);
 				player.draw();
 				coin.draw();
 			}
@@ -85,6 +87,7 @@
 			if(collides(player, coin)){
 				coin.x = Math.floor((Math.random() * CANVAS_WIDTH) + 1);
 				coin.y = Math.floor((Math.random() * CANVAS_HEIGHT) + 1);
+				count += 1;
 			}
 		}
 		</script>
