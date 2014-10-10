@@ -44,6 +44,7 @@
 			function draw() {
 				canvas.clearRect(0,0, CANVAS_WIDTH, CANVAS_HEIGHT);
 				player.draw();
+				coin.draw();
 			}
 			
 			var player = {
@@ -58,7 +59,17 @@
 				}
 			};
 			
-			
+			var coin = {
+				color: "#FFD700",
+				x: Math.floor((Math.random() * CANVAS_WIDTH) + 1),
+				y: Math.floor((Math.random() * CANVAS_HEIGHT) + 1),
+				width: 10,
+				height: 10,
+				draw: function(){
+					canvas.fillStyle = this.color;
+					canvas.fillRect(this.x, this.y, this.width, this.height);
+				}
+			};
 			
 		
 		</script>
