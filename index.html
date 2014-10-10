@@ -26,16 +26,16 @@
 			
 			function update(){
 				if(keydown.left){
-					player.x -= 1;
+					player.x -= 4;
 				}
 				if(keydown.right){
-					player.x += 1;
+					player.x += 4;
 				}
 				if(keydown.up){
-					player.y += 1;
+					player.y -= 4;
 				}
 				if(keydown.down){
-					player.y -= 1;
+					player.y += 4;
 				}
 			
 				 player.x = player.x.clamp(0, CANVAS_WIDTH - player.width);
