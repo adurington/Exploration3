@@ -13,8 +13,8 @@
 	    <script type='text/javascript'>
 			var CANVAS_WIDTH = 480;
 			var CANVAS_HEIGHT = 480;
-			
-			var canvasElement = $("<canvas width ='" + CANVAS_WIDTH + "' height='" + CANVAS_HEIGHT + "'></canvas>");
+
+			var canvasElement = $("<canvas width='" + CANVAS_WIDTH + "' height='" + CANVAS_HEIGHT + "'></canvas>");
 			var canvas = canvasElement.get(0).getContext("2d");
 			canvasElement.appendTo('body');
 			
@@ -24,17 +24,20 @@
 				draw();
 			}, 1000/FPS);
 			
+			var textX = 50;
+			var textY = 50;
 			function update(){
-			
+				textX += 1;
+				textY += 1;
 			}
-			function draw(){
-			
-			}
-			
+						
 			function draw() {
 				canvas.fillStyle = "#000";
-				canvas.fillText("hello world", 50, 50);
+				canvas.fillText("hello world", textX, textY);
 			}
+			
+			
+			
 			
 		
 		</script>
