@@ -21,6 +21,7 @@
 			setInterval(function() {
 				update();
 				draw();
+				collision();
 			}, 1000/FPS);
 			
 			
@@ -69,9 +70,22 @@
 					canvas.fillStyle = this.color;
 					canvas.fillRect(this.x, this.y, this.width, this.height);
 				}
+
 			};
 			
+		function collides(a,b){
+			return  a.x < b.x + b.width &&
+					a.x + a.width > b.x &&
+					a.y < b.y + b.height &&
+					a.y + a.height > b.y;
+		}
 		
+		function collision(){
+			if(collides(player, coin)){
+				coin.x = Math.floor((Math.random() * CANVAS_WIDTH) + 1);
+				coin.y = Math.floor((Math.random() * CANVAS_HEIGHT) + 1);
+			}
+		}
 		</script>
 
   </body>
