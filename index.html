@@ -2,11 +2,10 @@
   <head>
     <title>Exploration 3</title>
     
-    <script language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script><script language="javascript" src="javascripts/jquery.hotkeys.js" type="text/javascript"></script>
-	<script language="javascript" src="javascripts/key_status.js" type="text/javascript"></script>
-	<script language="javascript" src="javascripts/util.js" type="text/javascript"></script>
-	<script language="javascript" src="javascripts/sprite.js" type="text/javascript"></script>
-	<script language="javascript" src="javascripts/sound.js" type="text/javascript"></script>
+    <script language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js" type="text/javascript"></script><script language="javascript" src="js/jquery.hotkeys.js" type="text/javascript"></script>
+	<script language="javascript" src="js/key_status.js" type="text/javascript"></script>
+	<script language="javascript" src="js/util.js" type="text/javascript"></script>
+	
   </head>
   <body>
     <h1>Game Exploration</h1>
@@ -27,13 +26,12 @@
 			var textX = 50;
 			var textY = 50;
 			function update(){
-				player.x += 1;
-				textY += 1;
+					player.x += 1;
+			
+			//	 player.x = player.x.clamp(0, CANVAS_WIDTH - player.width);
 			}
 						
 			function draw() {
-				canvas.fillStyle = "#000";
-				canvas.fillText("hello world", textX, textY);
 				canvas.clearRect(0,0, CANVAS_WIDTH, CANVAS_HEIGHT);
 				player.draw();
 			}
