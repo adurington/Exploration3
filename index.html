@@ -24,22 +24,11 @@
 				draw();
 			}, 1000/FPS);
 			
-			
+			var textX = 50;
+			var textY = 50;
 			function update(){
-				if(keydown.left){
-					player.x -= 2;
-				}
-				if(keydown.right){
-					player.x += 2;
-				}
-				
-				if(keydown.up){
-					player.y += 2;
-				}
-				
-				if(keydown.down){
-					player.y -= 2;
-				}
+				player.x += 1;
+				textY += 1;
 			}
 						
 			function draw() {
@@ -59,12 +48,9 @@
 					canvas.fillStyle = this.color;
 					canvas.fillRect(this.x, this.y, this.width, this.height);
 				}
-			
 			};
 			
-			$(document).bind("keydown", "left", function(){
 			
-			};
 			
 		
 		</script>
